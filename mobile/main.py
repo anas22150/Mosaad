@@ -74,7 +74,11 @@ def main(page: ft.Page):
         status.value = ""
         page.update()
 
-    logo_image = ft.Image(src_base64=LOGO_BASE64, width=96, height=96)
+logo_image = ft.Image(
+    src=f"data:image/png;base64,{LOGO_BASE64}",
+    width=96,
+    height=96,
+)
     page.add(
         ft.Container(
             content=ft.Column([
